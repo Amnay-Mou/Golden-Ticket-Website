@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Golden Ticket  - Online Ticket Booking Website </title>
+
+
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+            		<video autoplay muted loop id="myVideo">
+      <source src="/video/back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+<header class="header-section">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="allhome">
+                    <img src="assets/images/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="allhome" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#0">Category</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="allevents">Events</a>-----------
+                        </li>
+                        <li>
+                            <a href="allmovies">Movies</a>-----------
+                        </li>
+                        <li>
+                            <a href="allsports">Sports</a>-----------
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="pgaboutws">About Us</a>
+                </li>
+                <li>
+                    <a href="pgcontacts">Contact Us</a>
+                </li>
+                <li class="header-button pr-0">
+                    <a href="allhome">Sign Out</a>
+                </li>
+            </ul>
+            <div class="header-bar d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ==========Header-Section========== -->
+
+
+    <!-- ==========Banner-Section========== -->
+    <section class="banner-section">
+        <div class="banner-bg bg_img bg-fixed" data-background="assets/images/banner/banner01.jpg"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="title  cd-headline clip"><span class="d-block">book your</span> tickets for 
+                    <span class="color-theme cd-words-wrapper p-0 m-0">
+                        <b class="is-visible">Movie</b>
+                        <b>Event</b>
+                        <b>Sport</b>
+                    </span>
+                </h1>
+                <p>Safe, secure, reliable ticketing.Your ticket to live entertainment!</p>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    <!-- ==========Movie-Section========== -->
+    <section class="movie-section padding-top padding-bottom">
+        <div class="container">
+            <div class="tab">
+                <div class="section-header-2">
+                    <div class="left">
+                        <h2 class="title">movies</h2>
+                        <p>Be sure not to miss these Movies today.</p>
+                    </div>
+                    <a href="allmovies" class="custom-button">viewe all</a >
+                 </div>
+                <div class="tab-area mb-30-none">
+                    <div class="tab-item active">
+                        <div class="owl-carousel owl-theme tab-slider">
+							<!--§§§§§§§§§§§§§§§§§§§§§§§§</div>§§§§§§§§§§§§-->
+							<th:block th:each="i : ${#numbers.sequence(0, allevnts.size() / 4)}">
+                            <div class="item" th:each="entertainment, iterStat : ${allevnts}" th:if="${entertainment.role == 1}">
+							    <div class="movie-grid">
+							        <div class="movie-thumb c-thumb">
+							            <a th:href="@{/moviedetails(id=${entertainment.idevent})}">
+							                <img th:src="${entertainment.pic1}" alt="movie">
+							            </a>
+							        </div>
+							        <div class="movie-content bg-one">
+							            <h5 class="title m-0">
+                                            <a th:href="@{/moviedetails(id=${entertainment.idevent})}" th:text="${entertainment.name}"></a>
+                                        </h5>
+							            <ul class="movie-rating-percent">
+							                <li>
+							                    <div class="thumb">
+							                        <img src="/data img/tst1.png" alt="movie">
+							                    </div>
+							                    <span class="content">Ticket Price: </span>
+							                </li>
+							                <li>
+							                    <span class="content" th:text="${entertainment.price}"></span>
+							                </li>
+							            </ul>
+							        </div>
+							    </div>
+							    
+							</div>
+
+                            <!--§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§-->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Movie-Section========== -->
+
+    <!-- ==========Event-Section========== -->
+    <section class="event-section padding-top padding-bottom bg-four">
+        <div class="container">
+            <div class="tab">
+                <div class="section-header-2">
+                    <div class="left">
+                        <h2 class="title">events</h2>
+                        <p>Be sure not to miss these Event today.</p>
+                    </div>
+                    <a href="allevents" class="custom-button">viewe all</a >
+                </div>
+                <div class="tab-area mb-30-none">
+                    <div class="tab-item active">
+                        <div class="owl-carousel owl-theme tab-slider">
+                            <th:block th:each="i : ${#numbers.sequence(0, allevnts.size() / 4)}">
+                            <div class="item" th:each="entertainment, iterStat : ${allevnts}" th:if="${entertainment.role == 2}">
+							    <div class="movie-grid">
+							        <div class="movie-thumb c-thumb">
+							            <a th:href="@{/eventdetails(id=${entertainment.idevent})}">
+							                <img th:src="${entertainment.pic1}" alt="movie">
+							            </a>
+							        </div>
+							        <div class="movie-content bg-one">
+							            <h5 class="title m-0">
+                                            <a th:text="${entertainment.name}" th:href="@{/eventdetails(id=${entertainment.idevent})}"></a>
+                                        </h5>
+							            <ul class="movie-rating-percent">
+							                <li>
+							                    <div class="thumb">
+							                        <img src="/data img/tst3.png" alt="movie">
+							                    </div>
+							                </li>
+							                <li>
+							                    <span class="content" th:text="${entertainment.time}"></span>
+							                </li>
+							            </ul>
+							        </div>
+							    </div>
+							    
+							</div>
+
+                        </div> 
+                    </div>
+         <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Event-Section========== -->
+
+    <!-- ==========Sports-Section========== -->
+    <section class="sports-section padding-top padding-bottom">
+        <div class="container">
+            <div class="tab">
+                <div class="section-header-2">
+                    <div class="left">
+                        <h2 class="title">sports</h2>
+                        <p>Be sure not to miss these Sports today.</p>
+                    </div>
+                    	<a href="allsports" class="custom-button">viewe all</a >
+                </div>
+                <div class="tab-area mb-30-none">
+                    <div class="tab-item active">
+                        <div class="owl-carousel owl-theme tab-slider">
+							<!-- 00000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+                            <th:block th:each="i : ${#numbers.sequence(0, allevnts.size() / 4)}">
+                            <div class="item" th:each="entertainment, iterStat : ${allevnts}" th:if="${entertainment.role == 3}">
+							    <div class="movie-grid">
+							        <div class="movie-thumb c-thumb">
+							            <a th:href="@{/sportdetails(id=${entertainment.idevent})}">
+							                <img th:src="${entertainment.pic1}" alt="movie">
+							            </a>
+							        </div>
+							        <div class="movie-content bg-one">
+							            <h5 class="title m-0">
+                                            <a th:text="${entertainment.name}" th:href="@{/sportdetails(id=${entertainment.idevent})}"></a>
+                                        </h5>
+							            <ul class="movie-rating-percent">
+							                <li>
+							                    <div class="thumb">
+							                        <img src="/data img/tst2.png" alt="movie">
+							                    </div>
+							                </li>
+							                <li>
+							                    <span class="content" th:text="${entertainment.time}"></span>
+							                </li>
+							            </ul>
+							        </div>
+							    </div>
+							</div>
+                            <!-- 00000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Sports-Section========== -->
+
+    <!-- ==========Newslater-Section========== -->
+    <footer class="footer-section">
+        <div class="newslater-section padding-bottom">
+            <div class="container">
+                <div class="newslater-container bg_img" data-background="assets/images/newslater/newslater-bg01.jpg">
+                    <div class="newslater-wrapper">
+                        <h5 class="cate">subscribe to Golden Ticket </h5>
+                        <h3 class="title">to get exclusive benifits</h3>
+                        <form class="newslater-form">
+                            <input type="text" placeholder="Your Email Address">
+                            <button type="submit">subscribe</button>
+                        </form>
+                        <p>We respect your privacy, so we never share your info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">
+                    <a href="allhome">
+                        <img src="assets/images/footer/footer-logo.png" alt="footer">
+                    </a>
+                </div>
+                <ul class="social-icons">
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0" class="active">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-area">
+                    <div class="left">
+                        <p>Copyright © 2023.All Rights Reserved By <a href="#0">Golden Ticket </a></p>
+                    </div>
+                    <ul class="links">
+                        <li>
+                            <a href="#0">About</a>
+                        </li>
+                        <li>
+                            <a href="#0">Terms Of Use</a>
+                        </li>
+                        <li>
+                            <a href="#0">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#0">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#0">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==========Newslater-Section========== -->
+    
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/heandline.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+
+</html>

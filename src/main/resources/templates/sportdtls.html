@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Golden Ticket  - Online Ticket Booking Website </title>
+
+
+</head>
+
+<body>
+     <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+            		<video autoplay muted loop id="myVideo">
+      <source src="/video/back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+	<header class="header-section">
+	    <div class="container">
+	        <div class="header-wrapper">
+	            <div class="logo">
+	                <a href="allhome">
+	                    <img src="assets/images/logo/logo.png" alt="logo">
+	                </a>
+	            </div>
+	            <ul class="menu">
+	                <li>
+	                    <a href="allhome" class="active">Home</a>
+	                </li>
+	                <li>
+	                    <a href="#0">Category</a>
+	                    <ul class="submenu">
+	                        <li>
+	                            <a href="allevents">Events</a>-----------
+	                        </li>
+	                        <li>
+	                            <a href="allmovies">Movies</a>-----------
+	                        </li>
+	                        <li>
+	                            <a href="allsports">Sports</a>-----------
+	                        </li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <a href="pgaboutws">About Us</a>
+	                </li>
+
+	                <li>
+	                    <a href="pgcontacts">Contact Us</a>
+	                </li>
+	                <li class="header-button pr-0">
+	                    <a href="login">Join Us</a>
+	                </li>
+	            </ul>
+	            <div class="header-bar d-lg-none">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+<!-- ==========Header-Section========== -->
+
+    <!-- ==========Event-Banner-Section========== -->
+    <section class="event-banner-section bg_img" data-background="assets/images/banner/banner09.jpg">
+        <div class="container">
+            <div class="event-banner">
+                <a href="https://www.youtube.com/watch?v=BFJ6vbwAsgI" class="video-popup">
+                    <span></span>
+                    <i class="flaticon-play-button"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Event-Banner-Section========== -->
+
+    <!-- ==========Event-Book-Search========== -->
+    <section class="event-book-search padding-top pt-lg-0">
+        <div class="container">
+            <div class="event-search bg_img" data-background="assets/images/ticket/ticket-bg01.jpg">
+                <div class="event-search-top">
+                    <div class="left">
+                        <h3 class="title">football league tournament</h3>
+                    </div>
+                    <div class="right" th:each="entertainment:${numsport}">
+                        <ul class="countdown">
+							<li>
+								<h2><span class="days">00</span></h2>
+								<p class="days_text">days</p>
+							</li>
+							<li>
+								<h2><span class="hours">00</span></h2>
+								<p class="hours_text">hrs</p>
+							</li>
+							<li>
+								<h2><span class="minutes">00</span></h2>
+								<p class="minu_text">min</p>
+							</li>
+							<li>
+								<h2><span class="seconds">00</span></h2>
+								<p class="seco_text">sec</p>
+							</li>
+						</ul>
+                        <a th:href="@{/sporttkt(id=${entertainment.idevent})}" class="custom-button">book tickets</a>
+                    </div>
+                </div>
+                <div class="event-search-bottom" th:each="entertainment:${numsport}">
+                    <div class="contact-side justify-content-start">
+                        <div class="item">
+                            <div class="item-thumb">
+                                <img src="assets/images/event/icon/event-icon02.png" alt="event">
+                            </div>
+                            <div class="item-content">
+                                <span class="up">Address: </span>
+                                <span th:text="${entertainment.address}"></span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-thumb">
+                                <img src="assets/images/event/icon/event-icon03.png" alt="event">
+                            </div>
+                            <div class="item-content">
+                                <span class="up">Phone: </span>
+                                <span th:text="${entertainment.phone}"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="active">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- ==========Event-Book-Search========== -->
+
+    <!-- ==========Event-About========== -->
+    <section class="event-about padding-top padding-bottom">
+        <div class="container">
+            <div class="row justify-content-between flex-wrap-reverse" th:each="entertainment:${numsport}">
+                <div class="col-lg-7 col-xl-6">
+                    <div class="event-about-content">
+                        <div class="section-header-3 left-style m-0">
+                            <span class="cate">are you ready to attend?</span>
+                            <h2 class="title" th:text="${entertainment.name}"> </h2>
+                            <p th:text="${entertainment.details}">
+                            </p>
+                            <a th:href="@{/sporttkt(id=${entertainment.idevent})}" class="custom-button">book tickets</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-7">
+                    <div class="event-about-thumb">
+                        <img th:src="${entertainment.pic1}" alt="sports">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Event-About========== -->
+
+    <!-- ==========Statistics-Section========== -->
+    <section class="statistics-section padding-top padding-bottom bg_img pb-lg-0" data-background="assets/images/statistics/statistics-bg01.jpg">
+        <div class="container">
+            <div class="section-header-3">
+                <span class="cate">what we have done</span>
+                <h2 class="title">our recent STATISTICS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
+            </div>
+            <div class="statistics-wrapper">
+                <div class="row mb--20">
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <div class="stat-thumb">
+                                <img src="assets/images/statistics/stat01.png" alt="statistics">
+                            </div>
+                            <div class="stat-content">
+                                <h3 class=" counter-item odometer" data-odometer-final="450"></h3>
+                                <span class="info">Tickets Booked</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <div class="stat-thumb">
+                                <img src="assets/images/statistics/stat02.png" alt="statistics">
+                            </div>
+                            <div class="stat-content">
+                                <h3 class=" counter-item odometer" data-odometer-final="500"></h3>
+                                <span class="info">Usefull Sessions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <div class="stat-thumb">
+                                <img src="assets/images/statistics/stat03.png" alt="statistics">
+                            </div>
+                            <div class="stat-content">
+                                <h3 class=" counter-item odometer" data-odometer-final="28"></h3>
+                                <span class="info">Talented Speakers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Statistics-Section========== -->
+
+ 
+
+    <!-- ==========Newslater-Section========== -->
+    <footer class="footer-section">
+        <div class="newslater-section padding-bottom">
+            <div class="container">
+                <div class="newslater-container bg_img" data-background="assets/images/newslater/newslater-bg01.jpg">
+                    <div class="newslater-wrapper">
+                       <h5 class="cate">subscribe to Golden Ticket </h5>
+                        <h3 class="title">to get exclusive benifits</h3>
+                        <form class="newslater-form">
+                            <input type="text" placeholder="Your Email Address">
+                            <button type="submit">subscribe</button>
+                        </form>
+                        <p>We respect your privacy, so we never share your info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">
+                    <a href="allhome">
+                        <img src="assets/images/footer/footer-logo.png" alt="footer">
+                    </a>
+                </div>
+                <ul class="social-icons">
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0" class="active">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-area">
+                    <div class="left">
+                        <p>Copyright © 2023.All Rights Reserved By <a href="#0">Golden Ticket </a></p>
+                    </div>
+                    <ul class="links">
+                        <li>
+                            <a href="#0">About</a>
+                        </li>
+                        <li>
+                            <a href="#0">Terms Of Use</a>
+                        </li>
+                        <li>
+                            <a href="#0">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#0">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#0">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==========Newslater-Section========== -->
+
+
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+
+</html>

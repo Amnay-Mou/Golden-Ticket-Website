@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Golden Ticket  - Online Ticket Booking Website </title>
+
+</head>
+<body>
+	<video autoplay muted loop id="myVideo">
+      <source src="/video/back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    		<video autoplay muted loop id="myVideo">
+      <source src="/video/back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+	<header class="header-section">
+	      <div class="container">
+	         <div class="header-wrapper">
+	            <div class="logo">
+	                <a href="404">
+	                    <img src="assets/images/logo/logo.png" alt="logo">
+	                </a>
+	            </div>
+	            <ul class="menu">
+	                <li>
+	                    <a href="/homeadmin" class="active">all</a>
+	                </li>
+	                <li>
+	                    <a href="/seealluser">all users</a>
+	                </li>
+	                <li>
+	                    <a href="/seemessages">all messeges</a>
+	                </li>
+	                <li>
+	                    <a href="/addnewbk">add Enter</a>
+	                </li>
+	                <li class="header-button pr-0">
+	                    <a href="allhome"></a>
+	                </li>
+	            </ul>
+	            <div class="header-bar d-lg-none">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+<!-- ==========Header-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <section class="main-page-header speaker-banner bg_img" data-background="assets/images/banner/banner07.jpg">
+        <div class="container">
+            <div class="speaker-banner-content">
+                <h2 class="title">Update Entertainments</h2>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+<body>
+	
+  <section class="account-section bg_img">
+    <div class="container">
+       <div class="padding-top padding-bottom">
+           <div class="account-area">
+         <div class="section-header-3">
+       <span class="cate">welcome</span>
+    <h2 class="title">to Golden Ticket </h2>
+  </div>
+  
+   <form  action="updt" method="post" class="vv" th:each="entertainment:${numevent}">
+	   
+  <div class="form-group">
+
+    <label for="name">Entertainment ID:</label>
+    <input type="number" name="idevent" th:value="${entertainment.idevent}" required readonly>
+    <br>
+    
+    <label for="name">Entertainment Name:</label>
+    <input type="text" id="name" name="name" th:value="${entertainment.name}" required>
+    <br>
+
+    <label for="price">Phone: </label>
+    <input type="text" name="phone" th:value="${entertainment.phone}" required>
+    <br>
+
+    <label for="text">Address: </label>
+    <input type="text" name="address" th:value="${entertainment.address}" required>
+    <br>
+
+    <label for="text">Time: </label>
+    <input type="text" name="time" th:value="${entertainment.time}" required>
+    <br>
+
+    <label for="author">Price: </label>
+    <input type="number" name="price" th:value="${entertainment.price}" required>
+    <br>
+
+    <label for="description">City: </label>
+    <input type="text" name="details" th:value="${entertainment.city}" required>
+    <br>
+
+    <label for="category">Role: </label>
+    <input type="number" id="role" name="role" th:value="${entertainment.role}" required>
+    <br>
+
+    <div class="form-group">
+    <label for="category">Details :</label>
+    <textarea id="details" name="details" required th:text="${entertainment.details}"></textarea>
+	</div>
+    <br>
+    
+    <label for="comment">Picture 1:</label>
+    <input  type="text" id="pic1" name="pic1" th:value="${entertainment.pic1}" required>
+    <br>
+    
+    <label for="comment">Picture 2:</label>
+    <input  type="text" id="pic2" name="pic2" th:value="${entertainment.pic2}" >
+    <br>
+    
+    <label for="comment">Picture 3:</label>
+    <input  type="text" id="pic3" name="pic3" th:value="${entertainment.pic3}" >
+    <br>
+    
+    <label for="comment">Picture 4:</label>
+    <input  type="text" id="pic4" name="pic4" th:value="${entertainment.pic4}" >
+    <br>
+    
+    <label for="comment">Picture 5:</label>
+    <input  type="text" id="pic5" name="pic5" th:value="${entertainment.pic5}" >
+    <br>
+    
+    <label for="comment">Picture 6:</label>
+    <input  type="text" id="pic6" name="pic6" th:value="${entertainment.pic6}" >
+    <br>
+    
+    <label for="comment">Picture 7:</label>
+    <input  type="text" id="pic7" name="pic7" th:value="${entertainment.pic7}" >
+    <br>
+   </div>
+   <div class="form-group text-center" style="margin-bottom: 20px;">
+    <button type="submit" class="submit-btn" id="addButton">Update Entertainment</button>
+   </div>
+  </form>
+</body>
+      </div>
+  </div>
+</body>
+
+	
+    <!-- ==========Section========== -->
+
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

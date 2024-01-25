@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Golden Ticket  - Online Ticket Booking Website </title>
+
+</head>
+<body>
+	<video autoplay muted loop id="myVideo">
+      <source src="/video/back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    		<video autoplay muted loop id="myVideo">
+      <source src="/video/back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+	<header class="header-section">
+	      <div class="container">
+	         <div class="header-wrapper">
+	            <div class="logo">
+	                <a href="allhome">
+	                    <img src="assets/images/logo/logo.png" alt="logo">
+	                </a>
+	            </div>
+	            <ul class="menu">
+	                <li>
+	                    <a href="/homeadmin" class="active">all</a>
+	                </li>
+	                <li>
+	                    <a href="/seealluser">all users</a>
+	                </li>
+	                <li>
+	                    <a href="/seemessages">all messeges</a>
+	                </li>
+	                <li>
+	                    <a href="/addnewbk">add Enter</a>
+	                </li>
+	                <li class="header-button pr-0">
+	                    <a href="allhome"></a>
+	                </li>
+	            </ul>
+	            <div class="header-bar d-lg-none">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+<!-- ==========Header-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <section class="main-page-header speaker-banner bg_img" data-background="assets/images/banner/banner07.jpg">
+        <div class="container">
+            <div class="speaker-banner-content">
+                <h2 class="title">List all Users</h2>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+	<table>
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Password</th>
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>Role</th>
+			</tr>
+		</thead>
+		<body>
+			<tr th:each="user:${alluser}">
+				<td th:text="${user.email}"></td>
+				<td th:text="${user.password}"></td>
+				<td th:text="${user.firstname}"></td>
+				<td th:text="${user.lastname}"></td>
+				<td th:text="${user.role}"></td>
+				<td><a class="pp" th:href="@{/deleteuser(id=${user.num})}" >Delete</a></td>
+			</tr>
+		</body>
+	</table>
+	
+    <!-- ==========Section========== -->
+
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
